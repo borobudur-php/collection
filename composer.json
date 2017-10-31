@@ -1,0 +1,26 @@
+{
+    "name": "borobudur/collection",
+    "type": "library",
+    "description": "Borobudur Collection Component",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Iqbal Maulana",
+            "email": "iq.bluejack@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/collections": "~1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Borobudur\\Component\\Collection\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
