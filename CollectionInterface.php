@@ -15,13 +15,13 @@ namespace Borobudur\Component\Collection;
 use ArrayAccess;
 use Closure;
 use Countable;
-use Doctrine\Common\Collections\Selectable;
+use Doctrine\Common\Collections\Criteria;
 use IteratorAggregate;
 
 /**
  * @author  Iqbal Maulana <iq.bluejack@gmail.com>
  */
-interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess, Selectable
+interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess
 {
     /**
      * Add element at the end of collection.
@@ -143,4 +143,11 @@ interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess,
      * @return int
      */
     public function count(): int;
+
+    /**
+     * @param Criteria $criteria
+     *
+     * @return CollectionInterface|static
+     */
+    public function matching(Criteria $criteria): CollectionInterface;
 }
