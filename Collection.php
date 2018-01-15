@@ -210,4 +210,9 @@ class Collection implements CollectionInterface
     {
         return new static($this->data->matching($criteria)->toArray());
     }
+
+    public function toArray(): array
+    {
+        return $this->data->toArray();
+    }
 }

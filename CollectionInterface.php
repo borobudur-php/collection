@@ -150,4 +150,9 @@ interface CollectionInterface extends Countable, IteratorAggregate, ArrayAccess
      * @return CollectionInterface|static
      */
     public function matching(Criteria $criteria): CollectionInterface;
+
+    /**
+     * @return array
+     */
+    public function toArray(): array;
 }
